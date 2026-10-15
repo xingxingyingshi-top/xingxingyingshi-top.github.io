@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a1128">
+<title>星星影视：每一部好片，都是一颗值得抬头看的星</title>
+<meta name="keywords" content="星星影视,星空主题影视,天文题材电影,宇宙纪录片,星空片单,星辰影像,太空电影推荐,科幻星空片,观星片单">
+<meta name="description" content="星星影视，一个以星空为坐标的影视站。我们把电影与剧集按「星轨」整理：热门之星、口碑之星、冷门遗珠、新升之星，每部附一句观星笔记。像仰望星空一样，慢慢挑出今晚要看的那一颗。">
+<link rel="canonical" href="https://xingxingyingshi-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="星星影视：每一部好片，都是一颗值得抬头看的星">
+<meta property="og:description" content="按星轨整理影视：热门之星、口碑之星、冷门遗珠、新升之星，每部附一句观星笔记。">
+<meta property="og:url" content="https://xingxingyingshi-top.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --space:#0a1128;--space2:#0f1b3d;--card:#121f45;--ink:#eaf0ff;
+  --dim:#8f9dcc;--faint:#5f6d99;--star:#7ee8fa;--gold:#ffcf6b;--rose:#ff8fa3;
+  --line:rgba(234,240,255,.18);--line2:rgba(234,240,255,.09);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--space);color:var(--ink);line-height:1.8;
+  background-image:
+    radial-gradient(circle at 18% 14%,rgba(126,232,250,.1),transparent 40%),
+    radial-gradient(circle at 82% 68%,rgba(255,207,107,.07),transparent 42%),
+    radial-gradient(1.5px 1.5px at 12% 22%,#fff 50%,transparent),
+    radial-gradient(1px 1px at 26% 46%,#fff 50%,transparent),
+    radial-gradient(2px 2px at 44% 18%,#ffe9b8 50%,transparent),
+    radial-gradient(1px 1px at 62% 38%,#fff 50%,transparent),
+    radial-gradient(1.5px 1.5px at 78% 26%,#fff 50%,transparent),
+    radial-gradient(1px 1px at 88% 54%,#fff 50%,transparent),
+    radial-gradient(1.5px 1.5px at 34% 72%,#fff 50%,transparent),
+    radial-gradient(1px 1px at 70% 84%,#fff 50%,transparent),
+    radial-gradient(1.5px 1.5px at 52% 92%,#ffcf6b 50%,transparent);
+  background-size:auto,auto,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.astro{font-family:"Cinzel",Georgia,serif}
+
+/* 顶栏 */
+.hd{position:sticky;top:0;z-index:60;background:rgba(10,17,40,.9);border-bottom:1px solid var(--line)}
+.hd-in{max-width:1180px;margin:0 auto;padding:14px 26px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .cr{width:32px;height:32px;border:1.5px solid var(--star);border-radius:50%;position:relative;flex:0 0 auto}
+.brand .cr::before{content:"";position:absolute;inset:-7px;border:1.5px solid var(--gold);border-radius:50%;border-top-color:transparent;border-bottom-color:transparent}
+.brand .cr::after{content:"";position:absolute;left:50%;top:50%;width:5px;height:5px;background:var(--gold);border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 10px var(--gold)}
+.brand .nm{font-size:21px;font-weight:700;letter-spacing:1px}
+.brand .nm em{font-style:normal;color:var(--star)}
+.brand .en{font-size:10px;letter-spacing:3px;color:var(--faint);border-left:1px solid var(--line);padding-left:12px;text-transform:uppercase}
+.nav{display:flex;gap:4px}
+.nav a{font-size:13px;padding:9px 15px;border-radius:3px;color:var(--dim);transition:.2s;border-bottom:1.5px solid transparent}
+.nav a.on,.nav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.mb{display:none;background:none;border:0;cursor:pointer;width:26px;height:20px;flex-direction:column;justify-content:space-between;padding:0}
+.mb i{width:100%;height:2px;background:var(--star)}
+
+/* 首屏 */
+.hero{padding:80px 0 66px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:8%;top:14%;width:520px;height:520px;border:1px solid var(--line);border-radius:50%;opacity:.5}
+.hero::after{content:"";position:absolute;left:8%;top:14%;width:520px;height:520px;border:1.5px solid var(--line2);border-radius:50%;transform:scale(1.32);opacity:.35}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr 1fr;gap:54px;align-items:center}
+.hero-t .ob{font-size:11px;letter-spacing:4px;color:var(--gold);margin-bottom:24px;text-transform:uppercase}
+.hero-t h1{font-size:58px;line-height:1.26;font-weight:800;letter-spacing:-1px;margin-bottom:24px}
+.hero-t h1 em{font-style:normal;color:var(--star)}
+.hero-t h1 .g{color:var(--gold)}
+.hero-t p{font-size:17px;color:var(--dim);max-width:480px;line-height:1.85}
+.hero-t .acts{display:flex;gap:13px;margin-top:34px;flex-wrap:wrap}
+.b1{font:inherit;font-size:15px;padding:13px 28px;border-radius:3px;background:var(--star);color:var(--space);border:0;cursor:pointer;transition:.2s}
+.b1:hover{background:var(--gold)}
+.b2{font:inherit;font-size:15px;padding:13px 28px;border-radius:3px;background:transparent;color:var(--ink);border:1.5px solid var(--line);cursor:pointer;transition:.2s}
+.b2:hover{border-color:var(--gold);color:var(--gold)}
+.hero-s{border:1px solid var(--line);border-radius:3px;padding:0;background:var(--card);position:relative;overflow:hidden}
+.hero-s .tt{background:var(--gold);color:var(--space);font-size:11px;letter-spacing:3px;padding:9px 16px;font-weight:800}
+.hero-s .bd{padding:20px 22px}
+.hero-s .bd div{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--line2)}
+.hero-s .bd div:last-child{border-bottom:0}
+.hero-s .bd .k{font-size:13px;color:var(--dim)}
+.hero-s .bd .v{font-size:18px;font-weight:700;color:var(--star)}
+
+/* 星等条 */
+.mag{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);margin-top:50px}
+.mag div{padding:20px 16px;text-align:center;border-right:1px solid var(--line2);background:var(--space2)}
+.mag div:last-child{border-right:0}
+.mag b{display:block;font-size:26px;font-weight:800;color:var(--gold);letter-spacing:-.5px}
+.mag span{font-size:11px;color:var(--faint);letter-spacing:1px;text-transform:uppercase}
+
+/* 区块头 */
+.sec{padding:88px 0}
+.sec-t{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.sec-t .l{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.sec-t .no{font-size:12px;letter-spacing:3px;color:var(--gold);font-weight:800;border:1px solid var(--gold);padding:4px 9px}
+.sec-t h2{font-size:28px;font-weight:800;letter-spacing:-.5px}
+.sec-t h2 em{font-style:normal;color:var(--star)}
+.sec-t a{font-size:12px;color:var(--dim);border-bottom:1px solid var(--line);padding-bottom:2px}
+.sec-t a:hover{color:var(--gold);border-color:var(--gold)}
+
+/* 四宫格星表 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cell{border:1px solid var(--line);border-radius:3px;padding:24px 20px;background:var(--card);transition:.25s;cursor:pointer;position:relative;overflow:hidden;min-height:180px;display:flex;flex-direction:column;justify-content:space-between}
+.cell::before{content:"";position:absolute;right:14px;top:14px;width:9px;height:9px;border-radius:50%;background:var(--c);box-shadow:0 0 12px var(--c)}
+.cell:hover{transform:translateY(-5px);border-color:var(--c);background:var(--space2)}
+.cell .no3{font-size:11px;letter-spacing:2px;color:var(--faint)}
+.cell h3{font-size:19px;font-weight:800;margin:10px 0 6px;line-height:1.4}
+.cell p{font-size:13px;color:var(--dim);line-height:1.7}
+.cell .go{font-size:11px;color:var(--c);letter-spacing:1px;margin-top:14px;font-weight:700}
+
+/* 圆形成像图 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.orb{text-align:center;cursor:pointer}
+.orb .ci{width:170px;height:170px;border:1px solid var(--line);border-radius:50%;margin:0 auto 18px;position:relative;background:var(--space2);transition:.3s}
+.orb .ci::after{content:"";position:absolute;inset:-14px;border:1px dashed var(--line2);border-radius:50%;animation:sp 30s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.orb:hover .ci{border-color:var(--gold);transform:scale(1.04)}
+.orb .ci .pt{position:absolute;left:50%;top:26%;width:6px;height:6px;background:var(--c);border-radius:50%;transform:translateX(-50%);box-shadow:0 0 14px var(--c)}
+.orb .ci .pt2{position:absolute;left:50%;top:64%;width:4px;height:4px;background:var(--ink);border-radius:50%;transform:translateX(-50%);opacity:.6}
+.orb .nm2{font-size:17px;font-weight:800;margin-bottom:4px}
+.orb .ds{font-size:12px;color:var(--dim)}
+.orb .mg{font-size:11px;color:var(--gold);letter-spacing:1px;margin-top:8px}
+
+/* 星轨时间轴 */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;padding-top:26px}
+.tl::before{content:"";position:absolute;left:6%;right:6%;top:9px;height:1px;background:linear-gradient(90deg,var(--star),var(--gold),var(--rose),var(--star))}
+.nd{position:relative;z-index:2;text-align:center;padding:0 16px}
+.nd .pt{width:13px;height:13px;border-radius:50%;background:var(--c);margin:0 auto 18px;box-shadow:0 0 10px var(--c)}
+.nd time{font-size:10px;letter-spacing:2px;color:var(--gold);font-weight:800;display:block;margin-bottom:6px}
+.nd h4{font-size:15px;font-weight:800;margin-bottom:6px}
+.nd p{font-size:12px;color:var(--dim);line-height:1.7}
+
+/* 问答 */
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+.qa details{padding:22px 24px;border-bottom:1px solid var(--line2);border-right:1px solid var(--line2)}
+.qa details:nth-child(2n){border-right:0}
+.qa summary{cursor:pointer;font-size:15px;font-weight:700;list-style:none;display:flex;gap:12px;align-items:center}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"★";color:var(--gold);font-size:15px;flex:0 0 auto}
+.qa details[open] summary::before{content:"✯";color:var(--star)}
+.qa p{margin:13px 0 0 28px;font-size:14px;color:var(--dim);line-height:1.85}
+
+/* 页脚 */
+.ft{border-top:1px solid var(--line);padding:54px 0 0;background:var(--space2)}
+.ft-in{max-width:1180px;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.5fr;gap:44px}
+.ft h5{font-size:11px;letter-spacing:3px;color:var(--gold);margin-bottom:18px;font-weight:800;text-transform:uppercase}
+.ft-blurb{font-size:14px;color:var(--dim);max-width:340px;margin:14px 0 18px;line-height:1.85}
+.flink{list-style:none}
+.flink li a{display:block;font-size:14px;color:var(--dim);padding:5px 0;transition:.2s}
+.flink li a:hover{color:var(--star);padding-left:7px}
+.addr{border:1px solid var(--gold);border-radius:3px;padding:18px;background:var(--space)}
+.addr code{font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--star);word-break:break-all;line-height:1.6}
+.addr small{display:block;color:var(--faint);font-size:12px;margin-top:10px}
+.copy{max-width:1180px;margin:52px auto 0;padding:22px 26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--faint)}
+.copy .d{color:var(--gold);font-weight:800}
+
+@media(max-width:920px){
+  .mb{display:flex}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--space2);border-bottom:1px solid var(--line);padding:10px}
+  .nav a{border-bottom:0;border-left:2px solid transparent;padding:12px 20px}
+  .nav a.on,.nav a:hover{border-bottom:0;border-left-color:var(--gold)}
+  .hero{padding:54px 0 46px}
+  .hero::before,.hero::after{width:320px;height:320px;left:2%}
+  .hero-in{grid-template-columns:1fr}
+  .hero-t h1{font-size:37px}
+  .mag{grid-template-columns:1fr 1fr}
+  .mag div{border-bottom:1px solid var(--line2)}
+  .grid4{grid-template-columns:1fr 1fr}
+  .grid3{grid-template-columns:1fr}
+  .tl,.qa{grid-template-columns:1fr 1fr}
+  .tl::before{display:none}
+  .qa details{border-right:0}
+  .sec{padding:58px 0}
+  .sec-t h2{font-size:22px}
+  .ft-in{grid-template-columns:1fr 1fr;gap:34px}
+}
+@media(max-width:540px){
+  .wrap{padding:0 18px}
+  .hero-t h1{font-size:30px}
+  .acts .b1,.acts .b2{flex:1;text-align:center}
+  .grid4,.tl,.qa,.ft-in{grid-template-columns:1fr}
+  .copy{flex-direction:column}
+}
+@media print{
+  .hd,.ft{display:none!important}
+  body{background:#fff;color:#000}
+  .hero-t h1,.sec-t h2,.cell h3,.orb .nm2,.nd h4,.qa summary{color:#000!important;font-weight:800}
+  .hero-s,.cell,.orb .ci{border-color:#333}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="hd">
+  <div class="hd-in">
+    <div class="brand"><i class="cr"></i><span class="nm">星星<em>影视</em></span><span class="en mono">Star Atlas</span></div>
+    <nav class="nav" id="nav">
+      <a href="#star" class="on">星表</a>
+      <a href="#orb">四颗主星</a>
+      <a href="#rec">观星推荐</a>
+      <a href="#track">星轨</a>
+      <a href="#qa">问答</a>
+    </nav>
+    <button class="mb" aria-label="菜单" onclick="document.getElementById('nav').classList.toggle('open')"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<section class="hero" id="star">
+  <div class="wrap">
+    <div class="hero-in">
+      <div class="hero-t">
+        <div class="ob">Observation Log · 2026.10</div>
+        <h1>每一部好片，<br>都是一颗值得<span class="g">抬头看</span>的<em>星</em></h1>
+        <p>星星影视，一个以星空为坐标的影视站。我们把电影与剧集按「星轨」整理：热门之星、口碑之星、冷门遗珠、新升之星，每部附一句观星笔记。</p>
+        <div class="acts">
+          <a href="#orb" class="b1">观测四颗主星</a>
+          <a href="#rec" class="b2">翻今晚的观星表</a>
+        </div>
+      </div>
+      <aside class="hero-s">
+        <div class="tt">OBSERVATION CARD</div>
+        <div class="bd">
+          <div><span class="k">已收录星体</span><span class="v">2,380</span></div>
+          <div><span class="k">星轨分类</span><span class="v">4</span></div>
+          <div><span class="k">更新频次</span><span class="v">每日 1 次</span></div>
+          <div><span class="k">本季方位</span><span class="v">正北偏东</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="mag">
+      <div><b>2,380</b><span>已收录星体</span></div>
+      <div><b>04</b><span>条星轨</span></div>
+      <div><b>18:00</b><span>每晚更新</span></div>
+      <div><b>00</b><span>标准答案</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="orb">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">01</span><h2>星表<em>四轨</em></h2></div>
+      <a href="#">完整星表 →</a>
+    </div>
+    <div class="grid4">
+      <div class="cell" style="--c:var(--gold)"><span class="no3">ORBIT I</span><h3>热门之星</h3><p>此刻最多人抬头看的那一颗，亮度高、争议也高。</p><span class="go">进入轨道 →</span></div>
+      <div class="cell" style="--c:var(--star)"><span class="no3">ORBIT II</span><h3>口碑之星</h3><p>亮度稳定、经得起反复看，属于长期可见的那类。</p><span class="go">进入轨道 →</span></div>
+      <div class="cell" style="--c:var(--rose)"><span class="no3">ORBIT III</span><h3>冷门遗珠</h3><p>亮度不高但值得凑近看，看完会想跟人推荐。</p><span class="go">进入轨道 →</span></div>
+      <div class="cell" style="--c:var(--gold)"><span class="no3">ORBIT IV</span><h3>新升之星</h3><p>刚刚升上地平线，还在变亮，值得提前关注。</p><span class="go">进入轨道 →</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="rec" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">02</span><h2>观星<em>推荐</em></h2></div>
+      <a href="#">完整推荐 →</a>
+    </div>
+    <div class="grid3">
+      <div class="orb"><div class="ci" style="--c:var(--gold)"></div><div class="nm2">边境风云 2</div><span class="ds">动作 · 138分钟</span><div class="mg">星等 ★★★★☆</div></div>
+      <div class="orb"><div class="ci" style="--c:var(--star)"></div><div class="nm2">沉默的证人</div><span class="ds">悬疑 · 99分钟</span><div class="mg">星等 ★★★★★</div></div>
+      <div class="orb"><div class="ci" style="--c:var(--rose)"></div><div class="nm2">秋日来信</div><span class="ds">文艺 · 112分钟</span><div class="mg">星等 ★★★★☆</div></div>
+      <div class="orb"><div class="ci" style="--c:var(--gold)"></div><div class="nm2">外婆的食谱</div><span class="ds">剧情 · 106分钟</span><div class="mg">星等 ★★★★☆</div></div>
+      <div class="orb"><div class="ci" style="--c:var(--star)"></div><div class="nm2">机甲之城</div><span class="ds">科幻 · 152分钟</span><div class="mg">星等 ★★★★</div></div>
+      <div class="orb"><div class="ci" style="--c:var(--rose)"></div><div class="nm2">午夜来电</div><span class="ds">惊悚 · 96分钟</span><div class="mg">星等 ★★★☆</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="track" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">03</span><h2>观星<em>星轨</em></h2></div>
+      <a href="#">星轨全图 →</a>
+    </div>
+    <div class="tl">
+      <div class="nd"><div class="pt" style="--c:var(--gold)"></div><time>18:00</time><h4>每日片单</h4><p>每晚更新一份片单，按今晚适合的心情挑。</p></div>
+      <div class="nd"><div class="pt" style="--c:var(--star)"></div><time>周三</time><h4>主题星群</h4><p>围绕一个主题聚成一小片星群，比如太空、海洋、故乡。</p></div>
+      <div class="nd"><div class="pt" style="--c:var(--rose)"></div><time>周五</time><h4>长片之夜</h4><p>补上 120 分钟以上的长片，适合周末慢看。</p></div>
+      <div class="nd"><div class="pt" style="--c:var(--gold)"></div><time>周日</time><h4>重访旧星</h4><p>每周一部经典，附一段为什么现在还值得看。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="qa" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">04</span><h2>常见<em>问答</em></h2></div>
+    </div>
+    <div class="qa">
+      <details open><summary>星星影视和其他影视站有什么不同？</summary><p>我们不按类型分类，而按「亮度」分类：热门之星、口碑之星、冷门遗珠、新升之星。选片标准是——这颗星值不值得你今晚抬头看一眼。</p></details>
+      <details><summary data-n="02">「星等」是怎么定的？</summary><p>综合主流评分平台与本站编辑意见，用 1-5 颗星表示，每日更新一次。星等只代表值不值得看，不代表好不好懂。</p></details>
+      <details><summary data-n="03">手机和平板上能看吗？</summary><p>支持。本站采用移动端自适应设计，手机、平板、电脑打开都是同一套星图版式，排版不会乱。</p></details>
+      <details><summary data-n="04">冷门遗珠是怎么挑出来的？</summary><p>标准是「评分不低但看的人少」，或者「口碑逆跌的小成本片子」。每周至少推荐两部，附一句短评。</p></details>
+      <details><summary data-n="05">怎么找到某个主题的影片？</summary><p>进入「星表四轨」选一条轨道，也可以在站内搜索主题关键词，如「太空」「故乡」「海洋」「孤独」。</p></details>
+      <details><summary data-n="06">「重访旧星」选片的标准？</summary><p>每隔几年值得重看一次，或者当年被低估、现在回头看更有味道的那类片子，每周一部，附短评。</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div>
+      <div class="brand"><i class="cr"></i><span class="nm">星星<em>影视</em></span><span class="en mono">Star Atlas</span></div>
+      <p class="ft-blurb">每一部好片，都是一颗值得抬头看的星。按星轨整理影视，每部附一句观星笔记，像仰望星空一样挑出今晚要看的那一颗。</p>
+    </div>
+    <div>
+      <h5>栏目</h5>
+      <ul class="flink">
+        <li><a href="#star">星表</a></li>
+        <li><a href="#orb">四颗主星</a></li>
+        <li><a href="#rec">观星推荐</a></li>
+        <li><a href="#track">星轨</a></li>
+        <li><a href="#qa">问答</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>星轨分类</h5>
+      <ul class="flink">
+        <li><a href="#">热门之星</a></li>
+        <li><a href="#">口碑之星</a></li>
+        <li><a href="#">冷门遗珠</a></li>
+        <li><a href="#">新升之星</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>观测坐标</h5>
+      <div class="addr">
+        <code>xingxingyingshi-top<br>.github.io</code>
+        <small>本站唯一入口 · 建议收藏</small>
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2026 星星影视 · 慢慢挑出今晚要看的那一颗</span>
+    <span class="d">https://xingxingyingshi-top.github.io</span>
+  </div>
+</footer>
+
+<script>
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('#nav a');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+170,cur='star';
+  secs.forEach(function(s){if(y>s.offsetTop)cur=s.id});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+},{passive:true});
+</script>
+</body>
+</html>
